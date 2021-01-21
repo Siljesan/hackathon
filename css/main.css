@@ -23,7 +23,7 @@ nav li {
   display: inline-block;
 }
 .nav__item {
-  padding: 5px;
+  padding: 10px;
   color: white;
 }
 .nav__item:hover {
@@ -44,4 +44,49 @@ nav li {
   width: 40px;
   background-color: #0c87f2;
   border-radius: 5px;
+}
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  margin: 20px;
+}
+main {
+  color: white;
+}
+.card {
+  margin: 20px 5px 20px 5px;
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  color: white;
+  background-color: #292929;
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "img name"
+    "img species"
+    "img status";
+}
+h1 {
+  margin-left: 50px;
+}
+.species {
+  grid-area: species;
+}
+.status {
+  grid-area: status;
+}
+img {
+  width: 200px;
+  height: 200px;
+  grid-area: img;
+}
+.dead {
+  grid-area: img;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  height: 200px;
+  width: 200px;
 }

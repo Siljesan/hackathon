@@ -1,4 +1,4 @@
-[
+var rickAndMorty = [
 	{
 		id: 1,
 		name: 'Rick Sanchez',
@@ -742,3 +742,27 @@
 		url: 'https://rickandmortyapi.com/api/character/20',
 	},
 ];
+
+for (var i = 0; i < rickAndMorty.length; i++) {
+	//console.log(rickAndMorty[i])
+	if (rickAndMorty[i].status === 'Alive') {
+	document.querySelector('.characters').innerHTML +=
+	'<div class="card"> <h2>' + rickAndMorty[i].name + '</h2>' +
+	'<p>' + rickAndMorty[i].species + '</p>' +
+	'<p>' + rickAndMorty[i].status + '</p>' + 
+	'<img src="'+rickAndMorty[i].image+'"/>' 
+	'</div>' }
+	else {
+		document.querySelector('.characters').innerHTML +=
+	'<div class="card"> <h2>' + rickAndMorty[i].name + '</h2>' +
+	'<p class="species">' + rickAndMorty[i].species + '</p>' +
+	'<p class="status">' + rickAndMorty[i].status + '</p>' + 
+	'<img class="image" src="'+rickAndMorty[i].image+'"/><div class="dead"></div>' 
+	'</div>'
+	}
+
+	//if (rickAndMorty[i].status !== 'Alive'){
+	//	document.querySelector('.characters').innerHTML +=
+	//	'<img class="dead" src="'+rickAndMorty[i].image+'"/>' 
+	//}
+} 
