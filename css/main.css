@@ -108,6 +108,83 @@ img {
   grid-area: location;
   margin: 0;
 }
+.menu-label {
+  display: none;
+}
+#menu {
+  display: none;
+}
 
 @media (max-width: 987px) {
+  .nav {
+    display: none;
+  }
+  .menu-label {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: white;
+  }
+  #menu {
+    display: none;
+  }
+  #menu:checked ~ .nav {
+    display: block;
+  }
+  .card {
+    height: 100px;
+    width: 300px;
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .dead {
+    height: 100px;
+    width: 300px;
+  }
+  .else {
+    height: 100px;
+    width: 100px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 1px;
+  }
+  .species,
+  .status,
+  .location {
+    font-size: 12px;
+  }
 }
+
+/*@media (max-width: 719px) {
+  .card {
+    height: 300px;
+    width: 160px;
+    grid-template-areas:
+      "name"
+      "species"
+      "status"
+      "location"
+      "img"
+      "img"
+      "img"
+      "img";
+  }
+  img {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .dead {
+    height: 300px;
+    width: 160px;
+  }
+  .else {
+    height: 160px;
+    width: 160px;
+  }
+}*/
