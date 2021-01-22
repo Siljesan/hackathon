@@ -745,24 +745,32 @@ var rickAndMorty = [
 
 for (var i = 0; i < rickAndMorty.length; i++) {
 	//console.log(rickAndMorty[i])
+
 	if (rickAndMorty[i].status === 'Alive') {
 	document.querySelector('.characters').innerHTML +=
 	'<div class="card"> <h2>' + rickAndMorty[i].name + '</h2>' +
-	'<p>' + rickAndMorty[i].species + '</p>' +
-	'<p>' + rickAndMorty[i].status + '</p>' + 
-	'<img src="'+rickAndMorty[i].image+'"/>' 
+	'<p class="species">' + rickAndMorty[i].species + '</p>' +
+	'<p class="status">' + rickAndMorty[i].status + '</p>' + 
+	'<p class="location">' + rickAndMorty[i].location.name + '</p>' + 
+	'<img class="image" src="'+rickAndMorty[i].image+'"/>' 
 	'</div>' }
+	else if (rickAndMorty[i].status === 'Dead'){
+		document.querySelector('.characters').innerHTML +=
+	'<div class="card"> <h2>' + rickAndMorty[i].name + '</h2>' +
+	'<p class="species">' + rickAndMorty[i].species + '</p>' +
+	'<p class="status">' + rickAndMorty[i].status + '</p>' + 
+	'<p class="location">' + rickAndMorty[i].location.name + '</p>' + 
+	'<img class="image" src="'+rickAndMorty[i].image+'"/><div class="dead"></div>' 
+	'</div>'
+	}
 	else {
 		document.querySelector('.characters').innerHTML +=
 	'<div class="card"> <h2>' + rickAndMorty[i].name + '</h2>' +
 	'<p class="species">' + rickAndMorty[i].species + '</p>' +
 	'<p class="status">' + rickAndMorty[i].status + '</p>' + 
-	'<img class="image" src="'+rickAndMorty[i].image+'"/><div class="dead"></div>' 
+	'<p class="location">' + rickAndMorty[i].location.name + '</p>' + 
+	'<img class="image" src="'+rickAndMorty[i].image+'"/><div class="else"></div>' 
 	'</div>'
 	}
 
-	//if (rickAndMorty[i].status !== 'Alive'){
-	//	document.querySelector('.characters').innerHTML +=
-	//	'<img class="dead" src="'+rickAndMorty[i].image+'"/>' 
-	//}
 } 

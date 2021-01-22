@@ -56,7 +56,7 @@ main {
   color: white;
 }
 .card {
-  margin: 20px 5px 20px 5px;
+  margin: 20px;
   height: 200px;
   width: 400px;
   text-align: center;
@@ -67,16 +67,19 @@ main {
   grid-template-areas:
     "img name"
     "img species"
-    "img status";
+    "img status"
+    "img location";
 }
 h1 {
   margin-left: 50px;
 }
 .species {
   grid-area: species;
+  margin: 0;
 }
 .status {
   grid-area: status;
+  margin: 0;
 }
 img {
   width: 200px;
@@ -84,9 +87,27 @@ img {
   grid-area: img;
 }
 .dead {
-  grid-area: img;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  height: 200px;
+  width: 400px;
+}
+.else {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
   height: 200px;
   width: 200px;
+}
+.location {
+  grid-area: location;
+  margin: 0;
+}
+
+@media (max-width: 987px) {
 }
